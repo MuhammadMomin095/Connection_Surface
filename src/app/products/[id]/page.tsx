@@ -68,20 +68,7 @@ export default function ProductPage() {
     return () => clearTimeout(timer)
   }, [])
 
-  const addToCart = async () => {
-    try {
-      toast({
-        title: "Success",
-        description: "Product added to cart",
-      })
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to add to cart",
-        variant: "destructive",
-      })
-    }
-  }
+ 
 
   if (loading) {
     return (
@@ -163,7 +150,7 @@ export default function ProductPage() {
           </div>
 
           <div className="space-y-4">
-            <Button onClick={addToCart} className="w-full bg-[#3498db] hover:bg-[#2980b9] h-12 text-lg">
+            <Button  className="w-full bg-[#3498db] hover:bg-[#2980b9] h-12 text-lg">
               Add to Cart
             </Button>
             <Button onClick={() => router.push("/")} variant="outline" className="w-full h-12 text-lg">
